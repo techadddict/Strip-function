@@ -1,0 +1,15 @@
+import re
+"""
+write a function that takes a string and does the same
+ thing as the strip() string method. If no other arguments are passed
+  other than the string to strip, then whitespace characters will be removed
+   from the beginning and end of the string. Otherwise, the characters specified
+    in the second argu- ment
+ to the function will be removed from the string.
+"""
+def strip_from_word(word,char_to_strip=''):
+    word_regex = re.compile(char_to_strip)
+    new_word= word_regex.sub('', word)
+    return new_word
+
+print(strip_from_word('whitespace ',''))
